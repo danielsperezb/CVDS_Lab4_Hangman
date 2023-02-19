@@ -14,7 +14,18 @@ import hangman.exceptions.HangmanException;
 
 public class OriginalScore implements GameScore{
 	public int calculateScore(int correctCount,int incorrectCount) throws HangmanException {
-		return 0;
+		int puntajeObtenido = 100;
+		
+		if (correctCount < 0 || incorrectCount < 0) {
+			throw new HangmanException(HangmanException.OUT_LIMITS_COUNTS);
+		}else if ( incorrectCount >= 0 && incorrectCount <= 10){
+			puntajeObtenido = puntajeObtenido-(incorrectCount*10);
+		}else if(incorrectCount > 10) {
+			puntajeObtenido = 0;
+		}else {
+			throw new HangmanException(HangmanException.NO_CASE_POSSIBLE);
+		}
+		return puntajeObtenido;
 	}
 }
 

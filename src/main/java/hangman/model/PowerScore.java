@@ -15,7 +15,29 @@ import hangman.exceptions.HangmanException;
 public class PowerScore implements GameScore{
 	public int calculateScore(int correctCount,int incorrectCount) throws HangmanException {
 		
-		return 0;
+		int puntajeObtenido = 0;
+		
+		if (correctCount < 0 || incorrectCount < 0) {
+			throw new HangmanException(HangmanException.OUT_LIMITS_COUNTS);
+		}else {
+			int totalCorrect = 0;
+	        for(int i=1;i<=correctCount;i++) {
+	        	totalCorrect+= Math.pow(5, i);
+	        }
+	        puntajeObtenido = totalCorrect - 8*incorrectCount;
+	        		
+	        if(puntajeObtenido > 500) {
+	        	puntajeObtenido = 500;
+	        	return puntajeObtenido;
+	        }else if(puntajeObtenido < 0) {
+	        	puntajeObtenido = 0;
+	        	return puntajeObtenido;
+	        }else if(!(puntajeObtenido > 500) && !(puntajeObtenido < 0)) {
+	        	return puntajeObtenido;
+	        }else {
+	        	throw new HangmanException(HangmanException.NO_CASE_POSSIBLE);
+	        }
+		}
 		
 	}
 }
