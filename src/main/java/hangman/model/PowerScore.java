@@ -1,5 +1,7 @@
 package hangman.model;
 
+import hangman.exceptions.HangmanException;
+
 /**
  * @throws hangman.exceptions.HangmanException
  * @pre El puntaje inicia en 0 puntos
@@ -11,7 +13,9 @@ package hangman.model;
  * @return puntajeObtenido
  */
 public class PowerScore implements GameScore{
-	public int calculateScore(int correctCount,int incorrectCount) {
+	public int calculateScore(int correctCount,int incorrectCount) throws HangmanException {
+		
 		return 0;
+		
 	}
 }

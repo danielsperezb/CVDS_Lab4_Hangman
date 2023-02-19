@@ -1,4 +1,5 @@
 package hangman.model;
+import hangman.exceptions.HangmanException;
 
 /**
  * @throws hangman.exceptions.HangmanException
@@ -10,8 +11,9 @@ package hangman.model;
  * @param incorrectCount - Cantidad de errores
  * @return puntajeObtenido
  */
+
 public class OriginalScore implements GameScore{
-	public int calculateScore(int correctCount,int incorrectCount) {
+	public int calculateScore(int correctCount,int incorrectCount) throws HangmanException {
 		return 0;
 	}
 }

@@ -1,4 +1,5 @@
 package hangman.model;
+import hangman.exceptions.HangmanException;
 
 /**
  * @throws hangman.exceptions.HangmanException
@@ -11,7 +12,8 @@ package hangman.model;
  * @return puntajeObtenido
  */
 public class BonusScore implements GameScore{
-	public int calculateScore(int correctCount,int incorrectCount) {
+	
+	public int calculateScore(int correctCount,int incorrectCount) throws HangmanException{
 		return 0;
 	}
 }
