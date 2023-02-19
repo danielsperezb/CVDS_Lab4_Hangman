@@ -27,6 +27,10 @@ public class OriginalScore implements GameScore{
 		}
 		return puntajeObtenido;
 	}
+	
+	public int getPuntajeInicial() {
+		return 100;
+	}
 }
 
 

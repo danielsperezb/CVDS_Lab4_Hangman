@@ -127,6 +127,7 @@ public class GameScoreTest {
 				assertEquals(0, score.calculateScore(10, 20));
 				assertEquals(0, score.calculateScore(200, 400));
 				assertEquals(0, score.calculateScore(9, 18));
+				assertEquals(0, score.calculateScore(0, 1));
 		    } catch (HangmanException e) {
 		        assertEquals(e.getMessage(),(HangmanException.NO_CASE_POSSIBLE));
 		    }

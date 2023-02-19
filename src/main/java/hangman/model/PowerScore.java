@@ -40,4 +40,8 @@ public class PowerScore implements GameScore{
 		}
 		
 	}
+	
+	public int getPuntajeInicial() {
+		return 0;
+	}
 }
