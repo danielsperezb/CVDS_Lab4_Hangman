@@ -1,6 +1,6 @@
 package hangman.model;
 import hangman.exceptions.HangmanException;
-
+//Actualizado
 /**
  * @throws hangman.exceptions.HangmanException
  * @pre El puntaje inicia en 100 puntos

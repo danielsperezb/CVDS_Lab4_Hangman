@@ -25,7 +25,7 @@ public class GameModel {
     private LocalDateTime dateTime;
     private int gameScore;
     private int[] lettersUsed;
-    private GameScore gameScoreCal = new BonusScore();
+    private GameScore gameScoreCal;
     
     
     private HangmanDictionary dictionary;
@@ -36,7 +36,7 @@ public class GameModel {
     
     
    
-    public GameModel(HangmanDictionary dictionary){
+    public GameModel(GameScore gameScoreCal,HangmanDictionary dictionary){
         //this.dictionary = new EnglishDictionaryDataSource();
         this.dictionary=dictionary;
         randomWord = selectRandomWord();
@@ -44,9 +44,8 @@ public class GameModel {
         incorrectCount = 0;
         correctCount = 0;
         gameScore = GameScore.getPuntajeInicial();
-    
-
-        
+        this.gameScoreCal = gameScoreCal;
+     
     }
     
     //method: reset
