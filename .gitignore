@@ -32,7 +32,7 @@ hs_err_pid*
 target/
 
 # File .settings
-.settings
+.settings/
 
 # File .classpath
 .classpath
