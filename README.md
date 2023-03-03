@@ -6,4 +6,4 @@ Nombre de los integrantes del taller:
 
 Proyecto: Hangman
 
-Entrega del laboratorio: https://github.com/danielsperezb/CVDS_Lab4_Hangman.git
+Entrega del laboratorio con el archivo .gitignore configurado correctamente: https://github.com/TeranRyl/CVDS_Lab4_Hangman.git
